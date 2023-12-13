@@ -2,7 +2,7 @@ FROM debian:12
 
 ## docker build -t jniltinho/openvpn-client https://github.com/jniltinho/docker-openvpn-client.git#:Debian
 ## docker run --rm -it --cap-add=NET_ADMIN --device=/dev/net/tun -v ${HOME}/.ssh/docker:/root/.ssh -v ${PWD}:/config jniltinho/openvpn-client bash
-## openvpn --cd /config --config /config/vpn-ae.conf --daemon
+## openvpn --cd /config --config /config/vpn-acme.conf --daemon
 
 ## Add below Flags OpenVPN 2.4 in config
 #script-security 2
