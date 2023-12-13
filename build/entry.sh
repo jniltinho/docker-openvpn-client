@@ -33,7 +33,6 @@ echo "using openvpn configuration file: $config_file"
 openvpn_args=(
     "--config" "$config_file"
     "--cd" "/config"
-    "--daemon"
 )
 
 if is_enabled "$KILL_SWITCH"; then
