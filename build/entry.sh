@@ -13,7 +13,7 @@ is_enabled() {
     [[ ${1,,} =~ ^(true|t|yes|y|1|on|enable|enabled)$ ]]
 }
 
-if [ -n "$NAME" ]; then
+if [[ -n "$NAME" ]]; then
     echo "Oiiiiii"
 fi
 
