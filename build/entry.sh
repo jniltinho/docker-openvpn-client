@@ -21,7 +21,7 @@ if [[ -n "$NAME" ]]; then
 fi
 
 # Either a specific file name or a pattern.
-if [[ -z "$CONFIG_FILE" ]]; then
+if [[ $CONFIG_FILE ]]; then
     config_file=$(find /config -name "$CONFIG_FILE" 2> /dev/null | sort | shuf -n 1)
 else
     config_file=$(find /config -name '*.conf' -o -name '*.ovpn' 2> /dev/null | sort | shuf -n 1)
