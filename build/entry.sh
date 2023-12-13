@@ -13,7 +13,7 @@ is_enabled() {
     [[ ${1,,} =~ ^(true|t|yes|y|1|on|enable|enabled)$ ]]
 }
 
-if [ -n $NILTON ]; then
+if [ -z "${MY_VARIABLE}" ]; then
     echo "Oiiiiii"
 fi
 
