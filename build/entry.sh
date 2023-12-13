@@ -13,7 +13,7 @@ is_enabled() {
     [[ ${1,,} =~ ^(true|t|yes|y|1|on|enable|enabled)$ ]]
 }
 
-if [[ -z $NILTON ]]; then
+if [ -n $NILTON ]; then
     echo "Oiiiiii"
 fi
 
