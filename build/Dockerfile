@@ -11,4 +11,4 @@ COPY . /usr/local/bin
 
 ENV KILL_SWITCH=on
 
-ENTRYPOINT [ "/bin/bash /usr/local/bin/entry.sh" ]
+ENTRYPOINT [ "entry.sh" ]
