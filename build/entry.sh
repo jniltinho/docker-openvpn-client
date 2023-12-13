@@ -33,6 +33,7 @@ echo "using openvpn configuration file: $config_file"
 openvpn_args=(
     "--config" "$config_file"
     "--cd" "/config"
+    "--daemon"
 )
 
 if is_enabled "$KILL_SWITCH"; then
@@ -44,7 +45,7 @@ if [[ $AUTH_SECRET ]]; then
     openvpn_args+=("--auth-user-pass" "/run/secrets/$AUTH_SECRET")
 fi
 
-openvpn "${openvpn_args[@]}" --daemon
+openvpn "${openvpn_args[@]}" &
 openvpn_pid=$!
 
 trap cleanup TERM
