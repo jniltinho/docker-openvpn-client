@@ -13,12 +13,6 @@ is_enabled() {
     [[ ${1,,} =~ ^(true|t|yes|y|1|on|enable|enabled)$ ]]
 }
 
-echo $SHELL
-
-
-if [[ -n "$NAME" ]]; then
-    echo "Oiiiiii"
-fi
 
 # Either a specific file name or a pattern.
 if [[ $CONFIG_FILE ]]; then
