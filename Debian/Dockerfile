@@ -10,7 +10,7 @@ ENV SHELL /bin/bash
 WORKDIR /config
 
 RUN mv /bin/sh /bin/sh.old && cp /bin/bash /bin/sh
-#COPY ./bashrc /root/.bashrc
+COPY ./bashrc /root/.bashrc
 
 
 RUN apt-get update && apt-get install -yq jq openvpn net-tools vim ssh iptables tzdata vim unzip \
