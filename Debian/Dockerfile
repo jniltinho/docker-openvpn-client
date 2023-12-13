@@ -4,6 +4,14 @@ FROM debian:12
 ## docker run --rm -it --cap-add=NET_ADMIN --device=/dev/net/tun -v ${HOME}/.ssh/docker:/root/.ssh -v ${PWD}:/config jniltinho/openvpn-client bash
 ## openvpn --cd /config --config /config/vpn-ae.conf --daemon
 
+## Add below Flags OpenVPN 2.4 in config
+#script-security 2
+#providers legacy default
+#tls-cipher "DEFAULT:@SECLEVEL=2"
+#data-ciphers AES-256-GCM:AES-128-GCM:BF-CBC
+#data-ciphers-fallback BF-CBC
+
+
 ENV TZ America/Sao_Paulo
 ENV SHELL /bin/bash
 
