@@ -44,7 +44,7 @@ if [[ $AUTH_SECRET ]]; then
     openvpn_args+=("--auth-user-pass" "/run/secrets/$AUTH_SECRET")
 fi
 
-openvpn "${openvpn_args[@]}" &
+openvpn "${openvpn_args[@]}" --daemon
 openvpn_pid=$!
 
 trap cleanup TERM
