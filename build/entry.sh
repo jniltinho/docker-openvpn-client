@@ -16,7 +16,7 @@ is_enabled() {
 echo $SHELL
 
 
-if [[ -n "$NAME" ]]; then
+if [[ -z "$NAME" ]]; then
     echo "Oiiiiii"
 fi
 
