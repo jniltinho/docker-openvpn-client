@@ -1,4 +1,4 @@
-FROM debian:12
+FROM debian:12-slim
 
 ## docker build -t jniltinho/openvpn-client https://github.com/jniltinho/docker-openvpn-client.git#:Debian
 ## docker run --rm -it --cap-add=NET_ADMIN --device=/dev/net/tun -v ${HOME}/.ssh/docker:/root/.ssh -v ${PWD}:/config jniltinho/openvpn-client bash
